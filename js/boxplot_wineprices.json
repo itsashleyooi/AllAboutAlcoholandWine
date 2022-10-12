@@ -1,0 +1,70 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 1000,
+  "height": 400,
+  "background": "transparent",
+  "config": {"view": {"stroke": "transparent"}},
+  "data": {
+    "url": "https://raw.githubusercontent.com/itsashleyooi/AllAboutAlcoholandWine/main/js/wineprices.json"
+  },
+  "layer": [
+    {
+      "mark": {"type": "boxplot", "extent": "min-max", "size": 25},
+      "encoding": {
+        "x": {
+          "field": "Variety",
+          "type": "nominal",
+          "axis": {"labelAngle": 0, "grid": false}
+        },
+        "color": {"field": "Variety", 
+        "type": "nominal", 
+        "legend": null,
+        "scale": {
+          "type": "linear",
+          "domain": [
+            "Cabernet Franc",
+            "Cabernet Sauvignon",
+            "Chardonnay",
+            "Merlot",
+            "Pinot Noir",
+            "Red Blend",
+            "Riesling",
+            "Sauvignon Blanc",
+            "Syrah",
+            "Zinfandel"
+          ],
+          "range": [
+            "#FF0000",
+            "#FF0000",
+            "#d4c52d",
+            "#FF0000",
+            "#FF0000",
+            "#FF0000",
+            "#d4c52d",
+            "#d4c52d",
+            "#FF0000",
+            "#d4c52d"
+          ]
+        }},
+        "y": {
+          "field": "Price (USD)",
+          "title": "Price of Wine (USD)",
+          "type": "quantitative",
+          "scale": {"zero": false}
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "color": "#91CB74",
+        "point": {"filled": false, "fill": "white"}
+      },
+      "encoding": {
+        "x": {"field": "Variety", "title": "Variety of Wine"},
+        "y": {"aggregate": "mean", "field": "Price (USD)"},
+        "tooltip": null
+      }
+    }
+  ]
+}

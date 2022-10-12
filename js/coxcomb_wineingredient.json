@@ -1,0 +1,38 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Ingredients used to make wine.",
+    "width": 460,
+    "height": 420,
+    "data": {
+      "values": [
+        { "Category": "Water", "value": 28, "percentage": "70%" },
+        { "Category": "Ethanol", "value": 8, "percentage": "20%" },
+        { "Category": "Other (Sugars, Acids, Phenols)", "value": 4, "percentage": "10%" }
+      ]
+    },
+    "layer": [{
+      "mark": {"type": "arc", "innerRadius": 20, "stroke":"null"}
+    },{
+      "mark": {"type": "text", "radiusOffset": 12},
+      "encoding": {
+        "text": {"field": "percentage", "type": "nominal"}}
+    }],
+    "encoding": {
+      "theta": {"field": "value", "type": "quantitative", "stack": true},
+      "radius": {"field": "value", "scale": {"type": "sqrt", "zero": true, "rangeMin": 20}},
+      "color": {"field": "Category", "type": "nominal", "legend": {"orient": "bottom", "direction": "horizontal"}, "scale":{"type": "linear",
+                "domain": [
+                    "Water",
+                    "Ethanol",
+                    "Other (Sugars, Acids, Phenols)"
+                ],"range": [
+                    "#80b1d3",
+                    "#fb8072",
+                    "#8dd3c7"
+                ]}
+    }
+  },
+  "background": "transparent",
+  "config": { "view": { "stroke": "transparent"}}
+}
+  

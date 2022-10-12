@@ -1,0 +1,263 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 500,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/itsashleyooi/AllAboutAlcoholandWine/main/data/gdp_consumption.csv"
+  },
+  "params": [
+    {
+      "name": "Population_Above",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 1000000000,
+        "step": 10000,
+        "name": "Minimum Population: "
+      }
+    },
+    {
+      "name": "Continent_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "North America",
+          "South America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+        ],
+        "labels": [
+          "All Continents",
+          "North America",
+          "South America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+        ],
+        "name": "Select Continent: "
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "datum.GDP_per_capita > 0"},
+    {"filter": "datum.Alcohol_consumption_litrespercapita > 0"},
+    {"filter": "datum.Population > Population_Above"},
+    {
+      "filter": "Continent_selection == null || datum.Continent == Continent_selection"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "Alcohol_consumption_litrespercapita",
+      "type": "quantitative",
+      "title": "Alcohol Consumption Per Capita (in liters)",
+      "axis": {"domain": false, "grid": false, "labelAngle": 0, "ticks": false}
+    },
+    "y": {
+      "field": "GDP_per_capita",
+      "type": "quantitative",
+      "title": "GDP Per Capita",
+      "axis": {"domain": false, "labelAngle": 0, "ticks": false}
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": 150,
+        "dy": -10,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": {
+          "field": "Country",
+          "type": "nominal",
+          "condition": [
+            {
+              "test": "datum['Country'] == 'Uganda'",
+              "value": "Uganda: Highest Consumption"
+            }
+          ]
+        },
+        "color": {"value": "darkred"},
+        "opacity": {
+          "condition": {
+            "test": "datum['Country'] == 'Uganda'",
+            "value": 1
+          },
+          "value": 0
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": 150,
+        "dy": -10,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": {
+          "field": "Country",
+          "type": "nominal",
+          "condition": [
+            {
+              "test": "datum['Country'] == 'Czechia '",
+              "value": "Czechia: 14.45 liters per capita"
+            }
+          ]
+        },
+        "color": {"value": "darkred"},
+        "opacity": {
+          "condition": {
+            "test": "datum['Country'] == 'Czechia '",
+            "value": 1
+          },
+          "value": 0
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "dx": -50,
+        "dy": 50,
+        "fontWeight": "bold",
+        "fontSize": 12
+      },
+      "encoding": {
+        "text": {
+          "field": "Country",
+          "type": "nominal",
+          "condition": [
+            {
+              "test": "datum['Country'] == 'Luxembourg'",
+              "value": "Kuwait has the Lowest Alcohol Consumption"
+            }
+          ]
+        },
+        "color": {"value": "#5A5A5A"},
+        "opacity": {
+          "condition": {
+            "test": "datum['Country'] == 'Luxembourg'",
+            "value": 1
+          },
+          "value": 0
+        }
+      }
+    },
+    {
+      "selection": {
+        "continent_highlight": {
+          "type": "multi",
+          "fields": ["Continent"],
+          "bind": "legend"
+        }
+      },
+      "mark": {"type": "circle", "cursor": "pointer"},
+      "encoding": {
+        "size": {
+          "field": "Population",
+          "type": "quantitative",
+          "scale": {
+            "type": "threshold",
+            "domain": [1000000, 10000000, 50000000, 100000000, 500000000],
+            "range": [10, 50, 150, 200, 300, 400]
+          },
+          "legend": {"format": ".1s"}
+        },
+        "color": {
+          "field": "Continent",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "North America",
+              "South America",
+              "Europe",
+              "Africa",
+              "Asia",
+              "Oceania"
+            ],
+            "range": [
+              "#ee4035 ",
+              "#984ea3",
+              "#f37736",
+              "#fdf498",
+              "#7bc043",
+              "#0392cf"
+            ]
+          }
+        },
+        "opacity": {
+          "condition": {"selection": "continent_highlight", "value": 0.85},
+          "value": 0.2
+        },
+        "tooltip": [
+          {"field": "Country", "type": "nominal"},
+          {"field": "Alcohol_consumption_litrespercapita", "title": "Alcohol Consumption","type": "quantitative", "format": ","},
+          {"field": "GDP_per_capita","title":"GDP Per Capita", "type": "quantitative", "format": ","},
+          {
+            "field": "Population",
+            "type": "quantitative",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -12,
+        "fontSize": 11.5,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "tooltip": [
+          {"field": "Country", "type": "nominal"},
+          {"field": "Alcohol_consumption_litrespercapita", "title": "Alcohol Consumption", "type": "quantitative", "format": ","},
+          {"field": "GDP_per_capita", "title": "GDP Per Capita", "type": "quantitative", "format": ","},
+          {"field": "Population", "type": "quantitative", "format": ","},
+          {
+            "field": "Population",
+            "type": "quantitative",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "mark": {"type": "line", "color": "brown", "x": "width", "size": 3},
+      "transform": [
+        {"regression": "GDP_per_capita", "on": "Alcohol_consumption_litrespercapita"}
+      ],
+      "encoding": {
+        "y": {
+          "field": "GDP_per_capita",
+          "type": "quantitative",
+          "title": "GDP Per Capita",
+          "axis": {"domain": false, "titlePadding": 15, "ticks": false}
+        },
+        "x": {
+          "field": "Alcohol_consumption_litrespercapita",
+          "type": "quantitative",
+          "title": "Alcohol Consumption Per Capita (in liters)",
+          "axis": {"domain": false, "titlePadding": 15, "ticks": false}
+        }
+      }
+    }
+  ],
+  "config": {
+    "background": "#FBF9F7",
+    "style": {"view": {"stroke": "transparent"}}
+  }
+}
