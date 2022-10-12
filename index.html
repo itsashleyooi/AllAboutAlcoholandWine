@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Echarts -->
+    <script src="js/echarts.js"></script>
+
+    <!-- up icons -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/415/415562.png" />
+
+    <link rel="manifest" href="/images/favicon_io/site.webmanifest" />
+    <title>All About Alcohol and Wine</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="sec-header">  
+          <div class="sec-border"></div>
+
+          <!-- Header and title -->
+          <div class="header" >
+            <img
+            class="logo-img"
+            src="https://cdn-icons-png.flaticon.com/512/1700/1700766.png"
+            alt="logo"
+            width="70"
+            height="70"
+            />
+            <h1>All About Alcohol and Wine </h1>
+          </div>
+          <div class="main-nav section_margin">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-12 main_nav_cover" id="nav">
+                            <ul id="main-menu">
+                              <li><a href="#consumption">Alcohol Consumption</a></li>
+                              <li><a href="#production">Wine Production</a></li>
+                              <li><a href="#elements">Wine Elements</a></li>
+                              <li><a href="#varieties">Top Wine Varieties</a></li>
+                              <li><a href="#price">Wine Prices</a></li>
+                              <li><a href="#gdp">Consumption & GDP</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <button onclick="goBackUp()" id="upButton" title="Go to top">
+            <i class='bx bx-up-arrow-alt'></i>
+          </button>
+      </div>
+        <!-- End of Header and title -->
+        
+      <div class="sec-border"></div>
+      
+      <div class="container-fluid" id="consumption">
+        <div class="viz-row">
+          <div class="chart-holder">
+            <h2>Country with the Highest Alcohol Consumption in 2019</h2>
+            <div id="choropleth_map"></div>
+          </div>
+          <div class="text-holder">
+            <p>
+              The datasets used to produce <span class="bolded coloured3">All About Alcohol and Wine</span> 
+              contains 130 thousand wine reviews including variety which is the type of grapes used to make the wine, 
+              location of production, winery designation and price of wine. 
+            </p>
+            <p>
+              In the world map,
+              <span class="bolded coloured3">181 countries</span> are coloured
+              based on their
+              <span class="bolded coloured3">alcohol consumption per capita</span>. A
+              <span class="bolded coloured2"> darker colour </span>
+              indicates the <span class="bolded coloured2">higher intake of alcohol </span> the
+              people of the country takes. Among all,
+              <span class="bolded coloured">Czechia</span> has the
+              <span class="bolded coloured">highest alcohol consumption per capita</span>
+              in <span class="bolded coloured">2019</span>. This is due to price of alcohol, specifically <span class="bolded coloured2">beer is cheaper than bottled water </span> as well as a <span class="bolded coloured2">unique drinking culture</span>
+              (Lapelosová, 2018).  
+            </p>
+          </div>
+        </div>
+      </div>
+      <div style="padding: 20px"></div>
+      <div class="separator"></div>
+      <div style="padding: 20px"></div>
+
+      <div class="container-fluid" id="production">
+        <div class="chart-holder">
+          <h2>Wine Producing Countries from 2012 to 2016</h2>
+          <h3>Which countries are ranked at the top for producing wine in the past years?</h3>
+          <p>
+            There is a series of changes on the
+            <span class="bolded coloured3">rank of wine production</span> over the past
+            years. The interactive chart below shows the
+            <span class="bolded coloured2">rank changes</span> for the
+            <span class="bolded coloured2">Top N Countries</span> from 
+            <span class="bolded coloured2">2012</span> to
+            <span class="bolded coloured2">2016</span>.
+            <span class="bolded coloured">Italy</span>
+            which has the <span class="bolded coloured">highest wine production</span> has been
+            <span class="bolded coloured"> ranked first</span> for
+            <span class="bolded coloured">four years</span>.
+            <br>
+            <br>
+            <br>
+          </p>
+          <div class="centered"><div id="bump_chart"></div></div>
+          <br> 
+          <br>
+          <h3>What is the volume of wine production for each top 10 wine producing countries?</h3>
+          <p>
+            According to the below visualisation, 
+            <span class="bolded coloured">Italy 🇮🇹, France 🇫🇷 and Spain 🇪🇸 </span> are the 
+            <span class="bolded coloured">top three producers</span> for wine worldwide in <span class="bolded coloured">2016</span>.
+            In the same year, 
+            <span class="bolded coloured3">Italy 🇮🇹</span> produced around 
+            <span class="bolded coloured3">45.6 million hectoliters</span> of wine, making it the 
+            <span class="bolded coloured3">world's largest wine production for 2016</span>. <span class="bolded coloured2">Italy</span> is known as a <span class="bolded coloured2">wine-producing powerhouse</span>
+            as <span class="bolded coloured2">more than 400 types of grapes</span> are grown across 20 winemaking regions. This helped 
+            Italy take the <span class="bolded coloured3">global top spot</span> in terms of the <span class="bolded coloured3">amount of wine produced</span> and putting itself 
+            at <span class="bolded coloured3">second place</span> when it comes to <span class="bolded coloured3">exports</span> (Cult Wine Academy, 2019).
+            <br>
+            <br>
+            <br>
+          </p>
+          <div id="isotype_chart"></div>
+          <p class="Open Sans" style="font-size: 15px;text-align: right; margin-top: -20px">Each flag represents
+            <strong>5</strong>
+            million hectoliters.
+        </p>
+    </div>
+
+      </div>
+      <div style="padding: 20px"></div>
+      <div class="separator"></div>
+      <div style="padding: 20px"></div>
+    
+      <div class="container-fluid" id="elements">
+        <div class="viz-row">
+          <div>
+            <h2 style="text-align: justify; margin: 30px">
+              How Different Wines Are Being Made?
+            </h2>
+            <h3 style="text-align: start; margin: 30px">
+              What is the breakdown of wines? And what is in a bottle of wine?
+            </h3>
+              <div class="split">
+                <div class="split-left" id="sankey_chart" style="width: 60%; height: 500%; margin: 20px 0;"></div>
+                <div class="split-right" id="coxcomb_chart" style="width: 40%; display: flex; align-items: center;">\
+                </div>
+              
+            </div>
+            <div class="text-holder">
+              <p>
+                Winemaking is the production of wine, starting with the selection of grapes, fermentation into alcohol and the bottling of the finished liquid. 
+                The <span class="bolded coloured3">main wine categories</span> are
+                <span class="bolded coloured6">White</span> and <span class="bolded coloured5">Red Wine</span>. 
+                <span class="bolded coloured6">White wine</span> is primarily <span class="bolded coloured6">made with white grapes</span>, and the skins are separated from the juice before the fermentation process while
+                <span class="bolded coloured5">Red Wine</span> is <span class="bolded coloured5">made with darker red or black grapes</span>, and the skins remain on the grapes during the fermentation process. 
+                <span class="bolded coloured3">Dry wines</span> contain residual sugar with <span class="bolded coloured3">less than 1%</span> and wines containing residual sugar with <span class="bolded coloured3">more than 10%</span> are considered as <span class="bolded coloured3">sweet wines</span> (Fadamitan, 2022). 
+                <br>
+                <br>
+                In general, wine contains <span class="bolded coloured2">70% of water</span>, <span class="bolded coloured2">20% of ethanol</span> and <span class="bolded coloured2">10% of other ingredients</span> such as <span class="bolded coloured2">sugar</span>, <span class="bolded coloured2">acids</span> and <span class="bolded coloured2">phenols</span>. 
+                Acidity in wines can range from <span class="bolded coloured3">extremely sour</span> at around <span class="bolded coloured3">2.5 pH (high acidity)</span> to <span class="bolded coloured3">very flat</span> at around <span class="bolded coloured3">4.5 pH (low acidity)</span>. According to Puckette (2022), <span class="bolded coloured">white wines tend to have higher acidity than red wines</span>. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  
+      <div style="padding: 20px"></div>
+      <div class="separator"></div>
+      <div style="padding: 20px"></div>
+
+      <div class="container-fluid" id="varieties">
+        <div class="chart-holder">
+          <h2>Top Varieties of Wine in 2017</h2>
+          <div class="viz-row">
+            <p>
+            <span class="bolded coloured5">Pinot Noir</span> is the world's
+            <span class="bolded coloured5">most popular light-bodied red wine</span> in <span class="bolded coloured5">2017</span>.
+            It’s loved for its red fruit, flower, and spice aromas that are accentuated by a long, smooth finish.
+            Pinot Noir pairs particularly well with duck, chicken, pork, and mushrooms. Besides that, it is considered 
+            as the <span class="bolded coloured3">best red wine for beginners</span>. 
+
+            On the other hand,  
+            <span class="bolded coloured6">Chardonnay</span> is the  
+            <span class="bolded coloured6">most popular white wine</span> worldwide in <span class="bolded coloured6">2017</span>.  
+            Chardonnay is made in a wide range of styles from lean, sparkling Blanc de Blancs to rich, creamy white wines aged in oak.
+            Chardonnay is usually paired with meaty fish (halibut, cod) and shellfish (lobster, shrimp, crab, scallops). It is also
+            now the <span class="bolded coloured3">most widely planted white grape variety, globally</span> (Puckette, 2022).
+            <br>
+            <br>
+            <br>
+          </p>
+          </div>
+          <div class="centered">
+            <div id="lollipop_chart"></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding: 20px"></div>
+      <div class="separator"></div>
+      <div style="padding: 20px"></div>
+
+      <div class="container-fluid" id="price">
+        <div class="chart-holder">
+          <h2>Exploring Wine Prices of Different Varieties</h2>
+          <h3>How expensive are the people's top 10 favourite wines?</h3>
+          <div class="viz-row">
+            <p>
+
+              Based on the boxplot visualisation below, the <span class="bolded coloured5">highest average price of red wine</span> is <span class="bolded coloured5">Pinot Noir</span> and 
+              <span class="bolded coloured6">Chardonnay for white wine</span>. 
+              It is also obeservable that <span class="bolded coloured">white wines tend to be less expensive compared to red wines</span>. 
+              An  <span class="bolded coloured3">average bottle of red wine (3.6 rating)</span> costs <span class="bolded coloured3">$15.66 USD</span> while an <span class="bolded coloured3">average bottle of white wine (3.6 rating)</span> costs <span class="bolded coloured3">$14.41 USD</span>
+              (Vivino, 2022).
+            <br>
+            <br>
+            <br> 
+            </p>
+            
+          </div>
+          <div class="centered">
+            <div id="boxplot_chart"></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding: 20px"></div>
+      <div class="separator"></div>
+      <div style="padding: 20px"></div>
+
+      <div class="container-fluid" id="gdp">
+        <div class="viz-row">
+          <div>
+            <h2 style="text-align: justify; margin: 30px">
+              Alcohol Consumption vs. GDP Per Capita in 2018 
+            </h2>
+            <h3 style="text-align: start; margin: 30px">
+              What is the relationship between Alcohol Consumption and GDP Per Capita in every country?
+            </h3>
+
+            <div class="text-holder">
+              <p>
+              We can see that <span class="bolded coloured2">Uganda</span> has the <span class="bolded coloured2">highest alcohol consumption per capita in liters</span>. An interesting finding is that 
+              although <span class="bolded coloured3">Singapore</span> has a <span class="bolded coloured3">higher GDP Per Capita</span> but its <span class="bolded coloured3">alcohol consumption per capita is 2.03 liters</span> which is <span class="bolded coloured3">lower</span> compared 
+              to <span class="bolded coloured3">Luxembourg</span> that is <span class="bolded coloured3">12.94 liters</span>. <span class="bolded coloured">Czechia</span> with the <span class="bolded coloured">population of 10,534,598</span> has a <span class="bolded coloured">very high alcohol consumption per capita</span> 
+              which is <span class="bolded coloured">14.45 liters</span>, making it the <span class="bolded coloured">second highest</span> in the list. 
+              </p>
+            </div>
+          </div>
+
+          <div class="chart-holder centered">
+            <div id="bubble_chart"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div style="padding: 60px"></div>
+
+      <div class="sec-border"></div>
+      <div class="pure-g">
+        <div class="pure-u-1-1 small-font">
+          <pp>Visualisation by <a href="https://github.com/itsashleyooi" target="_blank">Ashley Ooi Yan-Lin (31171095)</a> for FIT 3179 A2 2022. </pp>
+          <br>
+          <pp> Data taken from <a href="https://www.who.int/data/gho/data/themes/global-information-system-on-alcohol-and-health" target="_blank">World Health Organization</href></a>,
+            <a href="https://www.kaggle.com/datasets/shitalgaikwad123/wine-production-by-country" target="_blank">Wine Production by Country (Kaggle)</href></a>,
+            <a href="https://www.kaggle.com/datasets/zynicide/wine-reviews" target="_blank">Wine Reviews (Kaggle)</href></a>,
+            <a href="https://www.iscpcardio.org/expert-opinions/wine-and-cardio-health" target="_blank">International Society of Cardiovascular Pharmacotherapy</href></a>,
+            <a href="https://ourworldindata.org/alcohol-consumption" target="_blank">Our World in Data</href></a>
+          </pp>
+        </div>
+        </div>
+      </div>
+      
+        
+    </div>
+
+    <!-- functions -->
+    <script>
+      // go back to the start document
+    function goBackUp() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+
+    //Button dont always appear
+    var goUpButton = document.getElementById("upButton");
+    window.onscroll = function() {scrollFunction()};
+  
+    function scrollFunction() {
+      if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+        goUpButton.style.display = "block";
+      } else {
+        goUpButton.style.display = "none";
+      }
+    }
+    </script>
+
+    <!-- Visualisation initialisation VEGA -->
+    <script type="text/javascript">
+
+        var vg_1 = "js/choropleth_map.vg.json";
+        vegaEmbed("#choropleth_map", vg_1)
+          .then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+          })
+          .catch(console.error);
+
+        var vg_2 = "js/bumpchart_rank.vg.json";
+        vegaEmbed("#bump_chart", vg_2)
+          .then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+          })
+          .catch(console.error);
+
+        var vg_3 = "js/isotype_wineproduction.json";
+        vegaEmbed("#isotype_chart", vg_3)
+          .then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+          })
+          .catch(console.error);
+
+        var vg_4 = "js/coxcomb_wineingredient.json";
+        vegaEmbed("#coxcomb_chart", vg_4)
+          .then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+          })
+          .catch(console.error);
+
+        var vg_6 = "js/lollipop_winepopularity.json";
+        vegaEmbed("#lollipop_chart", vg_6)
+          .then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+          })
+          .catch(console.error);
+
+        var vg_7 = "js/boxplot_wineprices.json";
+        vegaEmbed("#boxplot_chart", vg_7)
+          .then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+          })
+          .catch(console.error);
+
+        var vg_8 = "js/bubbleplot.vg.json";
+        vegaEmbed("#bubble_chart", vg_8)
+            .then(function (result) {
+              // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+            })
+            .catch(console.error);      
+    </script>
+
+
+    <!-- Echarts -->
+    <script type="module" src="js/sankeychart_wine.js"></script>
+
+  </body>
+</html>
