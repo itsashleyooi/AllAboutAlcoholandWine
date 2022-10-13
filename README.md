@@ -1,7 +1,7 @@
 # FIT3179 Data Visualisation 2 - All About Alcohol and Wine
 A visualisation about alcohol consumption and wine from 2012 to 2019
 
-## Source of Data 
+## Data Sources 
 Global Information System on Alcohol and Health [World Health Organisation](https://www.who.int/data/gho/data/themes/global-information-system-on-alcohol-and-health)\
 Wine Production by Country [Kaggle](https://www.kaggle.com/datasets/shitalgaikwad123/wine-production-by-country)\
 Wine Reviews [Kaggle](https://www.kaggle.com/datasets/zynicide/wine-reviews)\
