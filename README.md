@@ -1,4 +1,4 @@
-# FIT3179 Data Visualisation 2, 2022
+# FIT3179 Data Visualisation 2
 A visualisation about alcohol consumption and wine from 2012 to 2019
 
 ## Data Sources 
