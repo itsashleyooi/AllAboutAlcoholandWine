@@ -1,0 +1,31 @@
+Wine ,Measurement,Percentage,Category
+Zinfandel,Min,14.0,Very High
+Zinfandel,Max,16.0,Very High
+Syrah,Min,13.0,High
+Syrah,Max,14.0,High
+Merlot,Min,13.0,High
+Merlot,Max,14.0,High
+Pinot Noir,Min,13.5,High
+Pinot Noir,Max,14.5,High
+Sweet Sherry,Min,15.0,Very High
+Sweet Sherry,Max,22.0,Very High
+Cabernet Sauvignon,Min,13.5,High
+Cabernet Sauvignon,Max,14.5,High
+Sangiovese,Min,12.0,Moderately Low 
+Sangiovese,Max,14.0,Moderately Low 
+Pinot Gris,Min,12.5,Moderately Low 
+Pinot Gris,Max,13.5,Moderately Low 
+White Zinfandel,Min,12.5,High
+White Zinfandel,Max,16.0,High
+Sparking Wine,Min,9.0,Very Low
+Sparking Wine,Max,12.0,Very Low
+Champagne,Min,9.0,Very Low
+Champagne,Max,12.0,Very Low
+Chardonnay,Min,13.5,High
+Chardonnay,Max,14.5,High
+Riesling,Min,12.5,Moderately Low 
+Riesling,Max,13.5,Moderately Low 
+Sauvignon Blanc,Min,12.5,Moderately Low 
+Sauvignon Blanc,Max,13.5,Moderately Low 
+Pinot Blanc,Min,12.5,Moderately Low 
+Pinot Blanc,Max,13.5,Moderately Low 
