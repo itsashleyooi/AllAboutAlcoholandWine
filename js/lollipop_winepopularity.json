@@ -95,7 +95,7 @@
                 "tooltip": [
                     {
                         "field": "Variety",
-                        "title": "Variety",
+                        "title": "Variety of Wine",
                         "type": "nominal"
                     },
                     {
