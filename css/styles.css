@@ -82,14 +82,15 @@
     display: flex;
     flex-direction: column;
     text-align: justify;
-    margin: 10px 10px;
+    margin: 10px 30px;
   }
   
   .text-holder {
     margin: 50px 30px;
     text-align: justify;
+    align-self: center;
   }
-  
+
   .viz-row {
     display: flex;
     flex-direction: row;
@@ -125,7 +126,15 @@
   }
   
   .coloured6 {
-    color: #d4c52d;
+    color: #DAA520;
+  }
+
+  .coloured7 {
+    color: #0096FF;
+  }
+
+  .coloured8 {
+    color: #DE3163;
   }
 
   .split {
