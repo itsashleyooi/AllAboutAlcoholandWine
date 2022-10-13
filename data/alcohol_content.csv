@@ -1,16 +1,31 @@
-Wine ,Min,Max,Ave,Category
-Zinfandel,14%,16%,15%,Very High
-Syrah,13%,14%,13.5%,High
-Merlot,13%,14%,13.5%,High
-Pinot Noir,13.5%,14.5%,14%,High
-Sweet Sherry,15%,22%,18.5%,Very High
-Cabernet Sauvignon,13.5%,14.5%,14%,High
-Sangiovese,12%,14%,13%,Moderately Low 
-Pinot Gris,12.5%,13.5%,13%,Moderately Low 
-White Zinfandel,12.5%,16%,14.3%,High
-Sparking Wine,9%,12%,10.5%,Very Low
-Champagne,9%,12%,10.5%,Very Low
-Chardonnay,13.5%,14.5%,14%,High
-Riesling,12.5%,13.5%,13%,Moderately Low 
-Sauvignon Blanc,12.5%,13.5%,13%,Moderately Low 
-Pinot Blanc,12.5%,13.5%,13%,Moderately Low 
+Wine ,Measurement,Min,Category
+Zinfandel,Min,14%,Very High
+Zinfandel,Max,16%,Very High
+Syrah,Min,13%,High
+Syrah,Max,14%,High
+Merlot,Min,13%,High
+Merlot,Max,14%,High
+Pinot Noir,Min,13.5%,High
+Pinot Noir,Max,14.5%,High
+Sweet Sherry,Min,15%,Very High
+Sweet Sherry,Max,22%,Very High
+Cabernet Sauvignon,Min,13.5%,High
+Cabernet Sauvignon,Max,14.5%,High
+Sangiovese,Min,12%,Moderately Low 
+Sangiovese,Max,14%,Moderately Low 
+Pinot Gris,Min,12.5%,Moderately Low 
+Pinot Gris,Max,13.5%,Moderately Low 
+White Zinfandel,Min,12.5%,High
+White Zinfandel,Max,16%,High
+Sparking Wine,Min,9%,Very Low
+Sparking Wine,Max,12%,Very Low
+Champagne,Min,9%,Very Low
+Champagne,Max,12%,Very Low
+Chardonnay,Min,13.5%,High
+Chardonnay,Max,14.5%,High
+Riesling,Min,12.5%,Moderately Low 
+Riesling,Max,13.5%,Moderately Low 
+Sauvignon Blanc,Min,12.5%,Moderately Low 
+Sauvignon Blanc,Max,13.5%,Moderately Low 
+Pinot Blanc,Min,12.5%,Moderately Low 
+Pinot Blanc,Max,13.5%,Moderately Low 
