@@ -25,9 +25,13 @@
 
     <link rel="manifest" href="/images/favicon_io/site.webmanifest" />
     <title>All About Alcohol and Wine</title>
+
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/1150/1150313.png" />
+
   </head>
 
-  <body>
+  <body>    
     <div id="container">
       <div class="sec-header">  
           <div class="sec-border"></div>
@@ -72,14 +76,14 @@
       <div class="container-fluid" id="consumption">
         <div class="viz-row">
           <div class="chart-holder">
-            <h2>Country with the Highest Alcohol Consumption in 2019</h2>
+            <h2>Country with the Highest Alcohol Consumption Per Capita in 2019</h2>
             <div id="choropleth_map"></div>
           </div>
           <div class="text-holder">
             <p>
               The datasets used to produce <span class="bolded coloured3">All About Alcohol and Wine</span> 
               contains 130 thousand wine reviews including variety which is the type of grapes used to make the wine, 
-              location of production, winery designation and price of wine. 
+              location of production, winery designation, price of wine and alcohol consumption.
             </p>
             <p>
               In the world map,
@@ -88,10 +92,10 @@
               <span class="bolded coloured3">alcohol consumption per capita</span>. A
               <span class="bolded coloured2"> darker colour </span>
               indicates the <span class="bolded coloured2">higher intake of alcohol </span> the
-              people of the country takes. Among all,
+              people of the country take. Among all,
               <span class="bolded coloured">Czechia</span> has the
               <span class="bolded coloured">highest alcohol consumption per capita</span>
-              in <span class="bolded coloured">2019</span>. This is due to price of alcohol, specifically <span class="bolded coloured2">beer is cheaper than bottled water </span> as well as a <span class="bolded coloured2">unique drinking culture</span>
+              in <span class="bolded coloured">2019</span>. This is due to the price of alcohol, specifically <span class="bolded coloured2">beer is cheaper than bottled water </span> as well as a <span class="bolded coloured2">unique drinking culture</span>
               (Lapelosová, 2018).  
             </p>
           </div>
@@ -104,27 +108,34 @@
       <div class="container-fluid" id="production">
         <div class="chart-holder">
           <h2>Wine Producing Countries from 2012 to 2016</h2>
-          <h3>Which countries are ranked at the top for producing wine in the past years?</h3>
           <p>
-            There is a series of changes on the
+            There have been a series of changes on the
             <span class="bolded coloured3">rank of wine production</span> over the past
             years. The interactive chart below shows the
             <span class="bolded coloured2">rank changes</span> for the
             <span class="bolded coloured2">Top N Countries</span> from 
             <span class="bolded coloured2">2012</span> to
             <span class="bolded coloured2">2016</span>.
-            <span class="bolded coloured">Italy</span>
-            which has the <span class="bolded coloured">highest wine production</span> has been
+            <span class="bolded coloured">Italy</span>,
+            which has the <span class="bolded coloured">highest wine production</span>, has been
             <span class="bolded coloured"> ranked first</span> for
             <span class="bolded coloured">four years</span>.
+          </p>
+          <p>
+            <span class="bolded coloured3">Italy</span> is <span class="bolded coloured3">one of the largest wine producers in the world</span>. The <span class="bolded coloured3">quality of Italian wine</span>, in addition to the <span class="bolded coloured3">winemaking tradition</span>, 
+            is due to the <span class="bolded coloured3">particular territory</span> from a <span class="bolded coloured3">geographical and climatic point of view</span> which has favoured the spread of a wide range of wines. The <span class="bolded coloured3">quality of wine</span> is 
+            <span class="bolded coloured3">significantly influenced by</span> a number of different factors, including, the <span class="bolded coloured3">quality of the vine</span>, <span class="bolded coloured3">climate and soil quality</span>, and the 
+            <span class="bolded coloured3">technology of maturation</span> and <span class="bolded coloured3">production of wine</span>. Its <span class="bolded coloured3">history</span> and the <span class="bolded coloured3">conformation of the territory</span>, mainly hilly, makes <span class="bolded coloured3">Italy the land most suitable for quality 
+            viticulture with over 300 different types of vines</span>, which are located in vineyards spread throughout every region, from north to south, including islands (Lucamarini, 2021).
             <br>
             <br>
             <br>
           </p>
           <div class="centered"><div id="bump_chart"></div></div>
-          <br> 
-          <br>
-          <h3>What is the volume of wine production for each top 10 wine producing countries?</h3>
+          <div style="padding: 20px"></div>
+          <div class="separator"></div>
+          <div style="padding: 20px"></div>
+          <h2>Volume of wine production for each top 10 wine producing countries</h2>
           <p>
             According to the below visualisation, 
             <span class="bolded coloured">Italy 🇮🇹, France 🇫🇷 and Spain 🇪🇸 </span> are the 
@@ -134,7 +145,7 @@
             <span class="bolded coloured3">45.6 million hectoliters</span> of wine, making it the 
             <span class="bolded coloured3">world's largest wine production for 2016</span>. <span class="bolded coloured2">Italy</span> is known as a <span class="bolded coloured2">wine-producing powerhouse</span>
             as <span class="bolded coloured2">more than 400 types of grapes</span> are grown across 20 winemaking regions. This helped 
-            Italy take the <span class="bolded coloured3">global top spot</span> in terms of the <span class="bolded coloured3">amount of wine produced</span> and putting itself 
+            Italy take the <span class="bolded coloured3">global top spot</span> in terms of the <span class="bolded coloured3">amount of wine produced</span> and put itself 
             at <span class="bolded coloured3">second place</span> when it comes to <span class="bolded coloured3">exports</span> (Cult Wine Academy, 2019).
             <br>
             <br>
@@ -153,39 +164,54 @@
       <div style="padding: 20px"></div>
     
       <div class="container-fluid" id="elements">
-        <div class="viz-row">
-          <div>
-            <h2 style="text-align: justify; margin: 30px">
-              How Different Wines Are Being Made?
-            </h2>
-            <h3 style="text-align: start; margin: 30px">
-              What is the breakdown of wines? And what is in a bottle of wine?
-            </h3>
-              <div class="split">
-                <div class="split-left" id="sankey_chart" style="width: 60%; height: 500%; margin: 20px 0;"></div>
-                <div class="split-right" id="coxcomb_chart" style="width: 40%; display: flex; align-items: center;">\
-                </div>
-              
-            </div>
-            <div class="text-holder">
-              <p>
-                Winemaking is the production of wine, starting with the selection of grapes, fermentation into alcohol and the bottling of the finished liquid. 
-                The <span class="bolded coloured3">main wine categories</span> are
-                <span class="bolded coloured6">White</span> and <span class="bolded coloured5">Red Wine</span>. 
-                <span class="bolded coloured6">White wine</span> is primarily <span class="bolded coloured6">made with white grapes</span>, and the skins are separated from the juice before the fermentation process while
-                <span class="bolded coloured5">Red Wine</span> is <span class="bolded coloured5">made with darker red or black grapes</span>, and the skins remain on the grapes during the fermentation process. 
-                <span class="bolded coloured3">Dry wines</span> contain residual sugar with <span class="bolded coloured3">less than 1%</span> and wines containing residual sugar with <span class="bolded coloured3">more than 10%</span> are considered as <span class="bolded coloured3">sweet wines</span> (Fadamitan, 2022). 
-                <br>
-                <br>
-                In general, wine contains <span class="bolded coloured2">70% of water</span>, <span class="bolded coloured2">20% of ethanol</span> and <span class="bolded coloured2">10% of other ingredients</span> such as <span class="bolded coloured2">sugar</span>, <span class="bolded coloured2">acids</span> and <span class="bolded coloured2">phenols</span>. 
-                Acidity in wines can range from <span class="bolded coloured3">extremely sour</span> at around <span class="bolded coloured3">2.5 pH (high acidity)</span> to <span class="bolded coloured3">very flat</span> at around <span class="bolded coloured3">4.5 pH (low acidity)</span>. According to Puckette (2022), <span class="bolded coloured">white wines tend to have higher acidity than red wines</span>. 
-              </p>
+        <div class="chart-holder">
+            <h2>How Different Wines Are Being Made?</h2>
+            <p>
+              Winemaking is the production of wine, starting with the selection of grapes, fermentation into alcohol and the bottling of the finished liquid. 
+              The <span class="bolded coloured3">main wine categories</span> are
+              <span class="bolded coloured6">White</span> and <span class="bolded coloured5">Red Wine</span>. 
+              <span class="bolded coloured6">White wine</span> is primarily <span class="bolded coloured6">made with white grapes</span>, and the skins are separated from the juice before the fermentation process while
+              <span class="bolded coloured5">Red Wine</span> is <span class="bolded coloured5">made with darker red or black grapes</span>, and the skins remain on the grapes during the fermentation process. 
+              <span class="bolded coloured3">Dry wines</span> contain residual sugar with <span class="bolded coloured3">less than 1%</span> and wines containing residual sugar with <span class="bolded coloured3">more than 10%</span> are considered as <span class="bolded coloured3">sweet wines</span> (Fadamitan, 2022). 
+            </p>
+            <div id="sankey_chart" style="height: 450%; margin: 20px 0;"></div>
+
+        
+            <div class="container-fluid">
+              <h2>What Is In A Glass Of Wine?</h2>
+              <div class="viz-row">
+                <p style="padding-right: 50px; width: 50%">
+                In general, wine contains <span class="bolded coloured2">70% of water</span>, 
+                <span class="bolded coloured2">20% of ethanol</span> and <span class="bolded coloured2">10% of 
+                other ingredients</span> such as <span class="bolded coloured2">sugar</span>, <span class="bolded coloured2">
+                acids</span> and <span class="bolded coloured2">phenols</span>. 
+                Acidity in wines can range from <span class="bolded coloured3">extremely sour</span> at around 
+                <span class="bolded coloured3">2.5 pH (high acidity)</span> to <span class="bolded coloured3">very flat</span> 
+                at around <span class="bolded coloured3">4.5 pH (low acidity)</span>. According to Puckette (2022), 
+                <span class="bolded coloured">white wines tend to have higher acidity than red wines</span>. 
+                This is due to the <span class="bolded coloured3">ripeness of the grapes</span>. <span class="bolded coloured7">Cooler climates</span> produce <span class="bolded coloured7">highly acidic wines</span> with very little naturally occurring sugars.
+
+                On the other hand, <span class="bolded coloured8">warmer climates</span> often <span class="bolded coloured8">produce wines with lower acidity</span>. The <span class="bolded coloured3">high temperatures cause grapes to ripen rapidly, reducing the naturally occurring
+                acids and increasing the sweetness of grapes and resulting wine</span> (McKenzie, 2020).
+                </p>
+                <p style="padding-left: 50px; width: 50%">
+                The <span class="bolded coloured2">average glass of wine contains about 11% to 13% alcohol</span>. However, different wine varieties contain a different amount of alcohol. The 
+                visualisation below displays the <span class="bolded coloured2">range of alcohol content in terms of Alcohol By Volume (ABV)</span>. Drinkers will notice that the back of their 
+                mouth or throat will feel warm due to the alcohol consumed. A <span class="bolded coloured3">wine with a greater ABV</span> would <span class="bolded coloured3">taste bolder and warmer</span>, almost as if the palate
+                were being slightly burned. According to the visualisation below, <span class="bolded coloured">Sweet Sherry has the highest alcohol by volume</span> while <span class="bolded coloured">Champagne and Sparkling
+                Wine has the lowest alcohol by volume</span>. 
+                </p>
+              </div>
+                <div class="split">
+                  <div class="split-left" id="coxcomb_chart" style="width: 50%; height: 500%; margin: 20px 0;"></div>
+                  <div class="split-right" id="rangeddotplot" style="width: 50%; margin: 20px 0; ">\
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-  
+
       <div style="padding: 20px"></div>
       <div class="separator"></div>
       <div style="padding: 20px"></div>
@@ -224,16 +250,16 @@
 
       <div class="container-fluid" id="price">
         <div class="chart-holder">
-          <h2>Exploring Wine Prices of Different Varieties</h2>
-          <h3>How expensive are the people's top 10 favourite wines?</h3>
+          <h2>Prices of The Top 10 Wine Varieties based on Reviews </h2>
           <div class="viz-row">
             <p>
 
               Based on the boxplot visualisation below, the <span class="bolded coloured5">highest average price of red wine</span> is <span class="bolded coloured5">Pinot Noir</span> and 
               <span class="bolded coloured6">Chardonnay for white wine</span>. 
-              It is also obeservable that <span class="bolded coloured">white wines tend to be less expensive compared to red wines</span>. 
-              An  <span class="bolded coloured3">average bottle of red wine (3.6 rating)</span> costs <span class="bolded coloured3">$15.66 USD</span> while an <span class="bolded coloured3">average bottle of white wine (3.6 rating)</span> costs <span class="bolded coloured3">$14.41 USD</span>
-              (Vivino, 2022).
+              It is also observable that <span class="bolded coloured">white wines tend to be less expensive compared to red wines</span>. 
+              An <span class="bolded coloured3">average bottle of red wine (3.6 rating)</span> costs <span class="bolded coloured3">$15.66 USD</span> while an <span class="bolded coloured3">average bottle of white wine (3.6 rating)</span> costs <span class="bolded coloured3">$14.41 USD</span>
+              (Vivino, 2022). However, do keep in mind that <span class="bolded coloured3">some varieties of wine are more expensive than others, even if the quality of the wine is the same</span>. For example, there is a <span class="bolded coloured3">high market
+              demand</span> for <span class="bolded coloured3">Champagne</span>, that <span class="bolded coloured3">similarly rated Sparkling Wines are much more affordable</span>. A 4.0 Champagne costs on average $50.46 USD, while a 4.0 Sparkling Wine costs on average just $31.73 USD.
             <br>
             <br>
             <br> 
@@ -254,18 +280,15 @@
         <div class="viz-row">
           <div>
             <h2 style="text-align: justify; margin: 30px">
-              Alcohol Consumption vs. GDP Per Capita in 2018 
+              Alcohol Consumption vs. Gross Domestic Product (GDP) Per Capita in 2018 
             </h2>
-            <h3 style="text-align: start; margin: 30px">
-              What is the relationship between Alcohol Consumption and GDP Per Capita in every country?
-            </h3>
 
             <div class="text-holder">
               <p>
-              We can see that <span class="bolded coloured2">Uganda</span> has the <span class="bolded coloured2">highest alcohol consumption per capita in liters</span>. An interesting finding is that 
-              although <span class="bolded coloured3">Singapore</span> has a <span class="bolded coloured3">higher GDP Per Capita</span> but its <span class="bolded coloured3">alcohol consumption per capita is 2.03 liters</span> which is <span class="bolded coloured3">lower</span> compared 
-              to <span class="bolded coloured3">Luxembourg</span> that is <span class="bolded coloured3">12.94 liters</span>. <span class="bolded coloured">Czechia</span> with the <span class="bolded coloured">population of 10,534,598</span> has a <span class="bolded coloured">very high alcohol consumption per capita</span> 
-              which is <span class="bolded coloured">14.45 liters</span>, making it the <span class="bolded coloured">second highest</span> in the list. 
+              We can see that <span class="bolded coloured2">Uganda</span> has the <span class="bolded coloured2">highest alcohol consumption per capita in litres</span>. An interesting finding is that 
+              although <span class="bolded coloured3">Singapore</span> has a <span class="bolded coloured3">higher GDP Per Capita</span> but its <span class="bolded coloured3">alcohol consumption per capita is 2.03 litres</span> which is <span class="bolded coloured3">lower</span> compared 
+              to <span class="bolded coloured3">Luxembourg</span> that is <span class="bolded coloured3">12.94 litres</span>. <span class="bolded coloured">Czechia</span> with the <span class="bolded coloured">population of 10,534,598</span> has a <span class="bolded coloured">very high alcohol consumption per capita </span> 
+              which is <span class="bolded coloured">14.45 litres</span>, making it the <span class="bolded coloured">second highest</span> in the list. 
               </p>
             </div>
           </div>
@@ -276,7 +299,7 @@
         </div>
       </div>
       
-      <div style="padding: 60px"></div>
+      <div style="padding: 30px"></div>
 
       <div class="sec-border"></div>
       <div class="pure-g">
@@ -292,9 +315,7 @@
         </div>
         </div>
       </div>
-      
-        
-    </div>
+  </div> 
 
     <!-- functions -->
     <script>
@@ -318,56 +339,63 @@
     </script>
 
     <!-- Visualisation initialisation VEGA -->
-    <script type="text/javascript">
+  <script type="text/javascript">
 
         var vg_1 = "js/choropleth_map.vg.json";
-        vegaEmbed("#choropleth_map", vg_1)
+        vegaEmbed("#choropleth_map", vg_1, {"actions": false})
           .then(function (result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
           })
           .catch(console.error);
 
         var vg_2 = "js/bumpchart_rank.vg.json";
-        vegaEmbed("#bump_chart", vg_2)
+        vegaEmbed("#bump_chart", vg_2, {"actions": false})
           .then(function (result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
           })
           .catch(console.error);
 
         var vg_3 = "js/isotype_wineproduction.json";
-        vegaEmbed("#isotype_chart", vg_3)
+        vegaEmbed("#isotype_chart", vg_3, {"actions": false})
           .then(function (result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
           })
           .catch(console.error);
 
         var vg_4 = "js/coxcomb_wineingredient.json";
-        vegaEmbed("#coxcomb_chart", vg_4)
+        vegaEmbed("#coxcomb_chart", vg_4, {"actions": false})
           .then(function (result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
           })
           .catch(console.error);
 
         var vg_6 = "js/lollipop_winepopularity.json";
-        vegaEmbed("#lollipop_chart", vg_6)
+        vegaEmbed("#lollipop_chart", vg_6, {"actions": false})
           .then(function (result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
           })
           .catch(console.error);
 
         var vg_7 = "js/boxplot_wineprices.json";
-        vegaEmbed("#boxplot_chart", vg_7)
+        vegaEmbed("#boxplot_chart", vg_7, {"actions": false})
           .then(function (result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
           })
           .catch(console.error);
 
         var vg_8 = "js/bubbleplot.vg.json";
-        vegaEmbed("#bubble_chart", vg_8)
+        vegaEmbed("#bubble_chart", vg_8, {"actions": false})
             .then(function (result) {
               // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
             })
-            .catch(console.error);      
+            .catch(console.error);   
+        
+        var vg_9 = "js/rangeddotplot_abv.json";
+        vegaEmbed("#rangeddotplot", vg_9, {"actions": false})
+            .then(function (result) {
+              // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+            })
+            .catch(console.error);   
     </script>
 
 
