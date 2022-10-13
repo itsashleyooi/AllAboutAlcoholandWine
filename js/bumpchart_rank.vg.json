@@ -20,25 +20,9 @@
     ],
     "transform": [
         {
-            "sort": [
-                {
-                    "field": "Wine_production_in_mhl",
-                    "order": "descending"
-                }
-            ],
-            "window": [
-                {
-                    "op": "rank",
-                    "as": "rank_wine"
-                }
-            ],
-            "groupby": [
-                "Year"
-            ]
-        },
-        {
-            "filter": "datum.rank_wine <= top_k_countries"
-        }
+            "sort": [{"field": "Wine_production_in_mhl", "order": "descending"}],
+            "window": [{"op": "rank", "as": "rank_wine"}],"groupby": ["Year"]},
+            {"filter": "datum.rank_wine <= top_k_countries"}
     ],
     "encoding": {
         "x": {
@@ -54,7 +38,7 @@
         },
         "y": {
             "field": "rank_wine",
-            "title": "Rank of Wine Production in Million Hectoliters",
+            "title": "Rank of Wine Production in Million Hectolitres",
             "type": "quantitative",
             "sort": "descending",
             "scale": {
@@ -95,7 +79,7 @@
             },
             {
                 "field": "Wine_production_in_mhl",
-                "title": "Wine production in million hectoliters",
+                "title": "Wine production in million hectolitres",
                 "format": ".1f"
             },
             {
@@ -147,7 +131,7 @@
             ],
             "mark": {
                 "type": "tick",
-                "thickness": 5,
+                "thickness": 8,
                 "cursor": "pointer"
             },
             "encoding": {
@@ -166,7 +150,11 @@
                         "value": 20
                     },
                     "value": 10
-                }
+                },
+                "opacity": {
+                    "condition": {"param": "legend_filter", "value": 0.9},
+                    "value": 0.2
+                  }
             }
         },
         {

@@ -58,7 +58,7 @@
             ]
           },
           "legend": {
-            "title": "Consumption (in litres) Per Capita",
+            "title": "Consumption Per Capita",
             "titleLimit": 1000
           }
         },
@@ -67,7 +67,7 @@
           {
             "field": "alcohol_per_capita",
             "type": "quantitative",
-            "title": "Alcohol Consumption Per Capita",
+            "title": "Alcohol Consumption Per Capita (in liters)",
             "format": ".2f"
           }
         ],

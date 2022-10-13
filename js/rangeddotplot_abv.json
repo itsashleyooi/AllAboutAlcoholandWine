@@ -1,0 +1,94 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "https://raw.githubusercontent.com/itsashleyooi/AllAboutAlcoholandWine/main/js/alcohol_content.json"},
+  "width": 400,
+  "height": 400,
+  "background": "transparent",
+  "transform": [
+    {
+      "filter": {
+        "field": "Variety",
+        "oneOf": ["Zinfandel", 
+        "Syrah", 
+        "Merlot", 
+        "Pinot Noir", 
+        "Sweet Sherry",
+        "Cabernet Sauvignon",
+        "Sangiovese",
+        "Pinot Gris",
+        "White Zinfandel",
+        "Sparking Wine",
+        "Champagne",
+        "Chardonnay",
+        "Riesling",
+        "Sauvignon Blanc",
+        "Pinot Blanc"]
+      }
+    },
+    {
+      "filter": {
+        "field": "Measurement",
+        "oneOf": ["Minimum", "Maximum"]
+      }
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "Percentage",
+      "type": "quantitative",
+      "title": "Alcohol Content (percentage) by Volume",
+      "axis": {
+        "tickCount": 10}
+    },
+    "y": {
+      "field": "Variety",
+      "type": "nominal",
+      "title": "Variety of Wine",
+      "axis": {
+        "offset": 5,
+        "ticks": false,
+        "minExtent": 70,
+        "domain": false
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": "line",
+      "encoding": {
+        "detail": {
+          "field": "Variety",
+          "type": "nominal"
+        },
+        "color": {"value": "#fd8d3c"}
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true
+      },
+      "encoding": {
+        "color": {
+          "field": "Measurement",
+          "type": "ordinal",
+          "scale": {
+            "domain": ["Minimum", "Maximum"],
+            "range": ["#fdae6b", "#e6550d"]
+          },
+          "title": "Range"
+        },
+        "size": {"value": 100},
+        "opacity": {"value": 1},
+        "tooltip":[
+          {"field": "Variety", "title":"Variety of Wine","type": "nominal"},
+          {"field": "Measurement", "title":"Range of Alcohol Content", "type": "nominal"},
+          {"field": "Percentage", "title":"Alcohol by Volume (%) ", "type": "quantitative"},
+          {"field": "Category", "title":"Category of Alcohol Content","type": "nominal"}
+        ]
+      }
+    }
+  ]
+}
+
+  

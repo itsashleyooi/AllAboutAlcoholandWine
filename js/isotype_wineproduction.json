@@ -1,14 +1,17 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "config": {"view": {"stroke": "transparent"}},
+    "height": 500,
     "width": "container",
     "background": "transparent",
-    "config": { "view": { "stroke": "transparent" } },
-    "height": 500,
-    "params": [
+    "data": {
+      "url": "https://raw.githubusercontent.com/itsashleyooi/AllAboutAlcoholandWine/main/data/productions_isotype.csv"
+    },
+    "params":[
         {
             "name": "Year_Selection",
             "value": 2016,
-            "bind": {
+            "bind":{
                 "input": "range",
                 "min": 2012,
                 "max": 2016,
@@ -16,35 +19,51 @@
                 "name": "Year: "
             }
         }
-    ],
-    "data": {
-        "url": "https://raw.githubusercontent.com/itsashleyooi/AllAboutAlcoholandWine/main/data/production_isotype.csv"
-    },
+
+      ],
     "transform": [
-        {
-            "calculate": "{'Italy': '🇮🇹', 'France': '🇫🇷', 'Spain': '🇪🇸', 'United States': '🇺🇸', 'Australia': '🇦🇺', 'China': '🇨🇳', 'South Africa': '🇿🇦', 'Chile': '🇨🇱', 'Argentina': '🇦🇷', 'Germany': '🇩🇪'}[datum.Country]",
-            "as": "emoji"
-        },
-        {
-            "window": [{ "op": "rank", "as": "rank" }],
-            "groupby": ["Year", "Country"]
-        },
-        {
-            "filter": "datum.Year == Year_Selection"
-        }
+      {
+        "calculate": "{'Italy': '🇮🇹', 'France': '🇫🇷', 'Spain': '🇪🇸', 'United States': '🇺🇸', 'Australia': '🇦🇺', 'China': '🇨🇳', 'South Africa': '🇿🇦', 'Chile': '🇨🇱', 'Argentina': '🇦🇷', 'Germany': '🇩🇪', 'Austria':'🇦🇹'}[datum.Country]",
+        "as": "emoji"
+      },
+      {"window": [{"op": "rank", "as": "rank"}], "groupby": ["Year", "Country"]},
+      {"filter":"datum.Year == Year_Selection"}
     ],
-    "mark": {
-        "type": "text",
-        "baseline": "middle"
-    },
+    
     "encoding": {
-        "y": { "field": "Country", "type": "nominal" },
-        "x": { "field": "rank", "type": "ordinal", "axis": null, "sort": null },
-        "text": { "field": "emoji", "type": "nominal" },
-        "size": { "value": 50 },
-        "tooltip": [
-            { "field": "Year", "type": "nominal" },
-            { "field": "Country", "type": "nominal" }
-        ]
-    }
-}
+      "x": {"field": "rank", "type": "ordinal", "axis": null, "sort": null},
+      "y": {"field": "Country", "type": "nominal"},
+      "text": {"field": "emoji", "type": "nominal"},
+      "size": {"value": 50},
+      "tooltip":[
+        {"field": "Year", "type": "nominal"},
+        {"field": "Country", "type": "nominal"}
+      ]
+    }, 
+      "layer": [
+          {
+              "mark": {"type": "text", "baseline": "middle"}
+          },
+          {
+              "transform": [
+                  {"filter": "datum.Country == 'Austria'"}
+                ],
+                "mark":{
+                  "type":"text",
+                  "align": "left",
+                  "baseline": "middle",
+                  "dx": 900,
+                  "dy": 0,
+                  "fontSize": 8,
+                  "limit": 220,
+                  "fontStyle": "italic",
+                  "fontWeight": "bold"
+                },
+                
+                "encoding": {
+                  "text":{"field":"Year",  "type":"nominal"},
+                  "color":{"value":"#D3D3D3"}
+                }
+          }
+      ]
+  }
