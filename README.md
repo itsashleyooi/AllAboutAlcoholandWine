@@ -11,4 +11,4 @@ Alcohol Consumption [Our World in Data](https://ourworldindata.org/alcohol-consu
 ## Link to visualisation
 [Click Here](https://itsashleyooi.github.io/AllAboutAlcoholandWine/)
 
-Author - Ashley Ooi Yan-Lin (31171095)
+Author: Ashley Ooi Yan-Lin (31171095)
