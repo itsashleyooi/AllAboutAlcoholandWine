@@ -250,7 +250,7 @@
         "x": {
           "field": "Alcohol_consumption_litrespercapita",
           "type": "quantitative",
-          "title": "Alcohol Consumption Per Capita (in liters)",
+          "title": "Alcohol Consumption Per Capita (in Litres)",
           "axis": {"domain": false, "titlePadding": 15, "ticks": false}
         }
       }
