@@ -1,5 +1,5 @@
-# FIT3179 Data Visualisation 2
-A visualisation about alcohol consumption and wine from 2012 to 2019
+# FIT3179 Data Visualisation Assignment 2
+Visualisations about alcohol consumption and wine from 2012 to 2019 using Vegalite. 
 
 ## Data Sources 
 Global Information System on Alcohol and Health [World Health Organisation](https://www.who.int/data/gho/data/themes/global-information-system-on-alcohol-and-health)\
@@ -12,3 +12,4 @@ Alcohol Consumption [Our World in Data](https://ourworldindata.org/alcohol-consu
 [Click Here](https://itsashleyooi.github.io/AllAboutAlcoholandWine/)
 
 Author: Ashley Ooi Yan-Lin (31171095)
+Monash University, Semester 2, 2022
