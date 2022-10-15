@@ -251,3 +251,49 @@ ul.sub-menu a::before {
 .top_bar {
   border-color: #000000 !important;
 }
+
+/*Bangladesh*/
+#pin_1{
+  width: 30px;
+  height: 30px;
+  position:relative;
+  top: -62.5%;
+  left: 60.2%;
+}
+
+/*Kuwait*/
+#pin_2{
+  width: 30px;
+  height: 30px;
+  position:relative;
+  top: -64.5%;
+  left: 46.5%;
+}
+
+/*Mauritania*/
+#pin_3{
+  width: 30px;
+  height: 30px;
+  position:relative;
+  top: -60.5%;
+  left: 29%;
+}
+
+/*Somalia*/
+#pin_4{
+  width: 30px;
+  height: 30px;
+  position:relative;
+  top: -55.5%;
+  left: 38%;
+}
+
+/*Czechia*/
+#pin_5{
+  width: 30px;
+  height: 30px;
+  position:relative;
+  top: -71.5%;
+  left: 27%;
+}
+
