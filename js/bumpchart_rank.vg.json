@@ -92,6 +92,7 @@
         {
             "mark": {
                 "type": "line",
+                "thickness": 20,
                 "interpolate": "monotone",
                 "cursor": "pointer"
             },

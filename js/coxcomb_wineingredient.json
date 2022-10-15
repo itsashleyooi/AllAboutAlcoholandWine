@@ -1,38 +1,65 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "Ingredients used to make wine.",
-    "width": 600,
-    "height": 400,
-    "data": {
-      "values": [
-        { "Category": "Water", "value": 28, "percentage": "70%" },
-        { "Category": "Ethanol", "value": 8, "percentage": "20%" },
-        { "Category": "Other (Sugars, Acids, Phenols)", "value": 4, "percentage": "10%" }
-      ]
-    },
-    "layer": [{
-      "mark": {"type": "arc", "innerRadius": 20, "stroke":"null"}
-    },{
-      "mark": {"type": "text", "radiusOffset": 12},
-      "encoding": {
-        "text": {"field": "percentage", "type": "nominal"}}
-    }],
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Ingredients used to make wine.",
+  "width": 600,
+  "height": 400,
+  "data": {
+   "url": "https://raw.githubusercontent.com/itsashleyooi/AllAboutAlcoholandWine/main/data/coxcomb_data.csv"
+  },
+  "layer": [{
+    "mark": {"type": "arc", "innerRadius": 20, "stroke":"null"}
+  },
+  {
+    "transform": [
+      {"filter": "datum['Category'] == 'Water'"},
+      {"calculate": "'Water: 70%'", "as": "text_annotation_raw"}
+    ],
+    "mark": {"type": "text", "dx": -250, "dy": -70, "fontStyle": "bold"},
     "encoding": {
-      "theta": {"field": "value", "type": "quantitative", "stack": true},
-      "radius": {"field": "value", "scale": {"type": "sqrt", "zero": true, "rangeMin": 20}},
-      "color": {"field": "Category", "type": "nominal", "legend": {"orient": "bottom", "direction": "horizontal"}, "scale":{"type": "linear",
-                "domain": [
-                    "Water",
-                    "Ethanol",
-                    "Other (Sugars, Acids, Phenols)"
-                ],"range": [
-                    "#80b1d3",
-                    "#fb8072",
-                    "#8dd3c7"
-                ]}
+      "text": {"field": "text_annotation_raw"},
+      "color": {"value": "black"},
+      "size": {"value": 15}
     }
   },
-  "background": "transparent",
-  "config": { "view": { "stroke": "transparent"}}
+    {
+      "transform": [
+        {"filter": "datum['Category'] == 'Ethanol'"},
+        {"calculate": "'Ethanol: 20%'", "as": "text_annotation_raw"}
+      ],
+      "mark": {"type": "text", "dx": -20, "dy": 30, "fontStyle": "bold"},
+      "encoding": {
+        "text": {"field": "text_annotation_raw"},
+        "color": {"value": "black"},
+        "size": {"value": 15}
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum['Category'] == 'Others'"},
+        {"calculate": "'Others: 10%'", "as": "text_annotation_raw"}
+      ],
+      "mark": {"type": "text", "dx": 50, "dy": 80, "fontStyle": "bold"},
+      "encoding": {
+        "text": {"field": "text_annotation_raw"},
+        "color": {"value": "black"},
+        "size": {"value": 15}
+      }
+    }],
+  "encoding": {
+    "theta": {"field": "value", "type": "quantitative", "stack": true},
+    "radius": {"field": "value", "scale": {"type": "sqrt", "zero": true, "rangeMin": 20}},
+    "color": {"field": "Category", "type": "nominal", "legend": {"orient": "bottom", "direction": "horizontal"}, "scale":{"type": "linear",
+              "domain": [
+                  "Water",
+                  "Ethanol",
+                  "Others"
+              ],"range": [
+                  "#80b1d3",
+                  "#fb8072",
+                  "#8dd3c7"
+              ]}
+  }
+},
+"background": "transparent",
+"config": { "view": { "stroke": "transparent"}}
 }
-  

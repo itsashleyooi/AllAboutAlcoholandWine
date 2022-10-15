@@ -28,7 +28,7 @@
           "lookup": "properties.NAME",
           "from": {
             "data": {
-              "url": "https://raw.githubusercontent.com/itsashleyooi/AllAboutAlcoholandWine/main/data/alcohol_consumption.csv"
+              "url": "https://raw.githubusercontent.com/itsashleyooi/AllAboutAlcoholandWine/main/data/alcohol_consumptions.csv"
             },
             "key": "Country",
             "fields": ["alcohol_per_capita"]

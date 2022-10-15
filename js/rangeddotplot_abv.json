@@ -87,8 +87,32 @@
           {"field": "Category", "title":"Category of Alcohol Content","type": "nominal"}
         ]
       }
+    },
+    {
+      "transform": [
+        {"filter": "datum['Variety'] == 'Chardonnay'"},
+        {"calculate": "'Highest alcohol by volume: linebreak Sweet Sherry '", "as": "text_annotation_raw"}
+      ],
+      "mark": {"type": "text", "dx": -140, "dy": 100, "fontStyle": "bold"},
+      "encoding": {
+        "text": {"field": "text_annotation_raw"},
+        "color": {"value": "#e6550d"},
+        "size": {"value": 12}
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum['Variety'] == 'Chardonnay'"},
+        {"calculate": "'Lowest alcohol by volume: linebreak Champagne and Sparking Wine'", "as": "text_annotation_raw"}
+      ],
+      "mark": {"type": "text", "dx": -140, "dy": 150, "fontStyle": "bold"},
+      "encoding": {
+        "text": {"field": "text_annotation_raw"},
+        "color": {"value": "#fdae6b"},
+        "size": {"value": 12}
+      }
     }
-  ]
+  ],
+  "config": {"lineBreak": "linebreak"}
 }
-
   

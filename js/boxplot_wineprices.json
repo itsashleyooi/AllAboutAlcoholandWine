@@ -3,7 +3,7 @@
   "width": 1000,
   "height": 400,
   "background": "transparent",
-  "config": {"view": {"stroke": "transparent"}},
+  "config": {"view": {"stroke": "transparent"},"lineBreak": "linebreak"},
   "data": {
     "url": "https://raw.githubusercontent.com/itsashleyooi/AllAboutAlcoholandWine/main/js/wineprices.json"
   },
@@ -64,6 +64,54 @@
         "x": {"field": "Variety", "title": "Variety of Wine"},
         "y": {"aggregate": "mean", "field": "Price (USD)"},
         "tooltip": null
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum['Variety'] == 'Pinot Noir'"},
+        {"calculate": "'Highest Median Price of Red Wine: Pinot Noir'", "as": "text_annotation_raw"}
+      ],
+      "mark": {"type": "text", "dx": 250, "dy": -150, "fontStyle": "bold"},
+      "encoding": {
+        "text": {"field": "text_annotation_raw"},
+        "color": {"value": "#FF0000"},
+        "size": {"value": 15}
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum['Variety'] == 'Pinot Noir'"},
+        {"calculate": "'Lowest Median Price of Red Wine: Cabernet Franc'", "as": "text_annotation_raw"}
+      ],
+      "mark": {"type": "text", "dx": 250, "dy": -130, "fontStyle": "bold"},
+      "encoding": {
+        "text": {"field": "text_annotation_raw"},
+        "color": {"value": "#FF0000"},
+        "size": {"value": 15}
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum['Variety'] == 'Chardonnay'"},
+        {"calculate": "'Highest Median Price of White Wine: Chardonnay '", "as": "text_annotation_raw"}
+      ],
+      "mark": {"type": "text", "dx": 250, "dy": -80, "fontStyle": "bold"},
+      "encoding": {
+        "text": {"field": "text_annotation_raw"},
+        "color": {"value": "#DAA520"},
+        "size": {"value": 15}
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum['Variety'] == 'Chardonnay'"},
+        {"calculate": "'Highest Median Price of White Wine: Riesling '", "as": "text_annotation_raw"}
+      ],
+      "mark": {"type": "text", "dx": 250, "dy": -60, "fontStyle": "bold"},
+      "encoding": {
+        "text": {"field": "text_annotation_raw"},
+        "color": {"value": "#DAA520"},
+        "size": {"value": 15}
       }
     }
   ]
