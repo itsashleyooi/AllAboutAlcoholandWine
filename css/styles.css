@@ -143,6 +143,14 @@
     color: #DE3163;
   }
 
+  .coloured9 {
+    color: #e6550d;
+  }
+
+  .coloured10 {
+    color: #fdae6b;
+  }
+
   .split {
     display: flex;
     flex-direction: row;
