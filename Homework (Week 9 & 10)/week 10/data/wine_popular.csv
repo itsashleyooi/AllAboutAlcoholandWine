@@ -1,0 +1,11 @@
+Variety,Occurrence,Normalised,Type of Wine,Indicator 
+Pinot Noir,10340,10,Red,1
+Cabernet Sauvignon,9178,9,Red,1
+Chardonnay,8127,8,White,0
+Syrah,4274,4,Red,1
+Zinfandel,3789,4,White,0
+Merlot,3630,4,Red,1
+Red Blend,3352,3,Red,1
+Sauvignon Blanc,2586,3,White,0
+Riesling,1652,2,White,0
+Cabernet Franc,1011,1,Red,1
