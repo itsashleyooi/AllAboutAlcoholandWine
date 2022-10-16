@@ -1,187 +1,187 @@
-﻿Country,alcohol_per_capita
-Czechia,14.26
-Latvia,13.19
-Moldova,12.85
-Germany,12.79
-Lithuania,12.78
-Ireland,12.75
-Spain,12.67
-Uganda,12.48
-Bulgaria,12.46
-Luxembourg,12.45
-Romania,12.34
-Andorra,12.26
-Montenegro,12.24
-France,12.23
-Slovenia,12.11
-Portugal,12.09
-Laos,12.08
-Tanzania,12.04
-Austria,11.93
-Poland,11.89
-United Kingdom,11.45
-Switzerland,11.23
-Hungary,11.07
-Slovakia,11.06
-Burkina Faso,11.05
-Belarus,10.96
-Cook Islands,10.94
-Belgium,10.8
-Cyprus,10.8
-Estonia,10.75
-New Zealand,10.69
-Finland,10.65
-Russia,10.5
-Greece,10.5
-Barbados,10.37
-Australia,10.36
-Denmark,10.13
-Japan,10.09
-United States of America,9.97
-Niue,9.93
-Netherlands,9.67
-Saint Lucia,9.59
-Georgia,9.47
-South Africa,9.45
-Argentina,9.45
-Antigua and Barbuda,9.4
-Iceland,9.21
-Sweden,9.04
-Grenada,8.96
-Chile,8.95
-Serbia,8.85
-Seychelles,8.84
-Canada,8.81
-Eswatini,8.78
-Croatia,8.73
-Thailand,8.5
-South Korea,8.45
-Ukraine,8.34
-Malta,8.27
-Gabon,8.08
-Italy,8.01
-Rwanda,7.96
-Vietnam,7.93
-Cambodia,7.84
-Angola,7.83
-Bosnia and Herzegovina,7.81
-Panama,7.77
-Burundi,7.45
-Suriname,7.4
-Brazil,7.32
-Dominica,7.23
-Saint Vincent and the Grenadines,7.15
-Norway,7.14
-Philippines,7.02
-Paraguay,7.01
-Uruguay,6.92
-Equatorial Guinea,6.92
-Albania,6.82
-Peru,6.78
-Dominican Republic,6.68
-Botswana,6.61
-Trinidad and Tobago,6.52
-North Macedonia,6.43
-Belize,6.37
-Saint Kitts and Nevis,6.34
-Cuba,6.26
-Nigeria,6.19
-China,6.04
-Mongolia,5.9
-Sao Tome and Principe,5.8
-India,5.61
-Guinea-Bissau,5.54
-Cameroon,5.52
-Colombia,5.45
-Liberia,5.37
-Guyana,5.33
-Sierra Leone,5.31
-Lesotho,5.08
-Nicaragua,5.07
-Mexico,5.05
-Kazakhstan,5
-Kyrgyzstan,4.85
-Bahamas,4.8
-Mauritius,4.78
-Armenia,4.67
-Zimbabwe,4.52
-Zambia,4.46
-Israel,4.38
-Nauru,4.18
-North Korea,4.16
-Jamaica,4.16
-El Salvador,4.09
-Malawi,4.08
-Costa Rica,4.07
-Honduras,3.93
-Bolivia,3.91
-United Arab Emirates,3.85
-Fiji,3.68
-Venezuela,3.56
-Gambia,3.36
-Ecuador,3.27
-Namibia,3.15
-Turkmenistan,3.09
-Ivory Coast,3.04
-Haiti,3.02
-Sri Lanka,2.87
-Samoa,2.82
-Ghana,2.78
-Maldives,2.78
-Mozambique,2.69
-Togo,2.66
-Uzbekistan,2.61
-Micronesia,2.51
-Kiribati,2.32
-Benin,2.23
-Ethiopia,2.2
-Kenya,2.15
-Myanmar,2.14
-Papua New Guinea,2.12
-Eritrea,2.11
-Vanuatu,2.1
-Tunisia,2.04
-Singapore,2
-Madagascar,1.98
-Turkey,1.77
-Solomon Islands,1.74
-Central African Republic,1.71
-Guatemala,1.63
-Lebanon,1.53
-Qatar,1.51
-Mali,1.31
-Tuvalu,1.31
-Chad,1.26
-Comoros,1.15
-Bahrain,1.13
-DR Congo,1.1
-Guinea,1.09
-Iran,1.01
-Azerbaijan,0.98
-Malaysia,0.93
-Oman,0.92
-Tajikistan,0.88
-Senegal,0.73
-Algeria,0.63
-Nepal,0.62
-Timor-Leste,0.53
-Niger,0.52
-Jordan,0.52
-Morocco,0.49
-Brunei,0.46
-Tonga,0.43
-Iraq,0.37
-Djibouti,0.36
-Pakistan,0.31
-Indonesia,0.22
-Bhutan,0.21
-Syria,0.19
-Egypt,0.14
-Yemen,0.034
-Libya,0.027
-Afghanistan,0.013
-Bangladesh,0
-Saudi Arabia,0
-Somalia,0
-Mauritania,0
-Kuwait,0
+﻿Country,alcohol_per_capita,continent
+Afghanistan,0.013,Asia
+Albania,6.82,Europe
+Algeria,0.63,Africa
+Andorra,12.26,Europe
+Angola,7.83,Africa
+Antigua and Barbuda,9.4,North America
+Argentina,9.45,South America
+Armenia,4.67,Asia
+Australia,10.36,Oceania
+Austria,11.93,Europe
+Azerbaijan,0.98,Europe
+Bahamas,4.8,North America
+Bahrain,1.13,Asia
+Bangladesh,0,Asia
+Barbados,10.37,North America
+Belarus,10.96,Europe
+Belgium,10.8,Europe
+Belize,6.37,North America
+Benin,2.23,Africa
+Bhutan,0.21,Asia
+Bolivia,3.91,South America
+Bosnia and Herzegovina,7.81,Europe
+Botswana,6.61,Africa
+Brazil,7.32,South America
+Brunei,0.46,Asia
+Bulgaria,12.46,Europe
+Burkina Faso,11.05,Africa
+Burundi,7.45,Africa
+Cambodia,7.84,Asia
+Cameroon,5.52,Africa
+Canada,8.81,North America
+Central African Republic,1.71,Africa
+Chad,1.26,Africa
+Chile,8.95,South America
+China,6.04,Asia
+Colombia,5.45,South America
+Comoros,1.15,Africa
+Cook Islands,10.94,Oceania
+Costa Rica,4.07,North America
+Croatia,8.73,Europe
+Cuba,6.26,North America
+Cyprus,10.8,Europe
+Czechia,14.26,Europe
+Denmark,10.13,Europe
+Djibouti,0.36,Africa
+Dominica,7.23,North America
+Dominican Republic,6.68,North America
+DR Congo,1.1,Africa
+Ecuador,3.27,South America
+Egypt,0.14,Africa
+El Salvador,4.09,North America
+Equatorial Guinea,6.92,Africa
+Eritrea,2.11,Africa
+Estonia,10.75,Europe
+Eswatini,8.78,Africa
+Ethiopia,2.2,Africa
+Fiji,3.68,Oceania
+Finland,10.65,Europe
+France,12.23,Europe
+Gabon,8.08,Africa
+Gambia,3.36,Africa
+Georgia,9.47,Europe
+Germany,12.79,Europe
+Ghana,2.78,Africa
+Greece,10.5,Europe
+Grenada,8.96,North America
+Guatemala,1.63,North America
+Guinea,1.09,Africa
+Guinea-Bissau,5.54,Africa
+Guyana,5.33,South America
+Haiti,3.02,North America
+Honduras,3.93,North America
+Hungary,11.07,Europe
+Iceland,9.21,Europe
+India,5.61,Asia
+Indonesia,0.22,Asia
+Iran,1.01,Asia
+Iraq,0.37,Asia
+Ireland,12.75,Europe
+Israel,4.38,Asia
+Italy,8.01,Europe
+Ivory Coast,3.04,Africa
+Jamaica,4.16,North America
+Japan,10.09,Asia
+Jordan,0.52,Asia
+Kazakhstan,5,Asia
+Kenya,2.15,Africa
+Kiribati,2.32,Africa
+Kuwait,0,Asia
+Kyrgyzstan,4.85,Asia
+Laos,12.08,Asia
+Latvia,13.19,Europe
+Lebanon,1.53,Asia
+Lesotho,5.08,Africa
+Liberia,5.37,Africa
+Libya,0.027,Africa
+Lithuania,12.78,Europe
+Luxembourg,12.45,Europe
+Madagascar,1.98,Africa
+Malawi,4.08,Africa
+Malaysia,0.93,Asia
+Maldives,2.78,Asia
+Mali,1.31,Africa
+Malta,8.27,Europe
+Mauritania,0,Africa
+Mauritius,4.78,Africa
+Mexico,5.05,North America
+Micronesia,2.51,Oceania
+Moldova,12.85,Europe
+Mongolia,5.9,Asia
+Montenegro,12.24,Europe
+Morocco,0.49,Africa
+Mozambique,2.69,Africa
+Myanmar,2.14,Asia
+Namibia,3.15,Africa
+Nauru,4.18,Oceania
+Nepal,0.62,Asia
+Netherlands,9.67,Europe
+New Zealand,10.69,Oceania
+Nicaragua,5.07,North America
+Niger,0.52,Africa
+Nigeria,6.19,Africa
+Niue,9.93,Asia
+North Korea,4.16,Europe
+North Macedonia,6.43,Europe
+Norway,7.14,Europe
+Oman,0.92,Asia
+Pakistan,0.31,Asia
+Panama,7.77,North America
+Papua New Guinea,2.12,Oceania
+Paraguay,7.01,South America
+Peru,6.78,South America
+Philippines,7.02,Asia
+Poland,11.89,Europe
+Portugal,12.09,Europe
+Qatar,1.51,Asia
+Romania,12.34,Europe
+Russia,10.5,Europe
+Rwanda,7.96,Africa
+Saint Kitts and Nevis,6.34,Africa
+Saint Lucia,9.59,North America
+Saint Vincent and the Grenadines,7.15,North America
+Samoa,2.82,Oceania
+Sao Tome and Principe,5.8,Africa
+Saudi Arabia,0,Asia
+Senegal,0.73,Africa
+Serbia,8.85,Europe
+Seychelles,8.84,Africa
+Sierra Leone,5.31,Africa
+Singapore,2,Asia
+Slovakia,11.06,Europe
+Slovenia,12.11,Europe
+Solomon Islands,1.74,Oceania
+Somalia,0,Africa
+South Africa,9.45,Asia
+South Korea,8.45,Asia
+Spain,12.67,Europe
+Sri Lanka,2.87,Asia
+Suriname,7.4,South America
+Sweden,9.04,Europe
+Switzerland,11.23,Europe
+Syria,0.19,Asia
+Tajikistan,0.88,Asia
+Tanzania,12.04,Africa
+Thailand,8.5,Asia
+Timor-Leste,0.53,Asia
+Togo,2.66,Africa
+Tonga,0.43,Oceania
+Trinidad and Tobago,6.52,North America
+Tunisia,2.04,Africa
+Turkey,1.77,Asia
+Turkmenistan,3.09,Asia
+Tuvalu,1.31,Oceania
+Uganda,12.48,Africa
+Ukraine,8.34,Europe
+United Arab Emirates,3.85,Asia
+United Kingdom,11.45,Europe
+United States of America,9.97,North America
+Uruguay,6.92,South America
+Uzbekistan,2.61,Asia
+Vanuatu,2.1,Oceania
+Venezuela,3.56,South America
+Vietnam,7.93,Asia
+Yemen,0.034,Asia
+Zambia,4.46,Africa
+Zimbabwe,4.52,Africa
