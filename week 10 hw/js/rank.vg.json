@@ -1,0 +1,212 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 1000,
+    "height": 400,
+    "data": {
+        "url": "https://raw.githubusercontent.com/itsashleyooi/AllAboutWineVisualisation/main/data/wine_ranks.csv"
+    },
+    "params": [
+        {
+            "name": "top_k_countries",
+            "value": 8,
+            "bind": {
+                "input": "range",
+                "min": 1,
+                "max": 8,
+                "step": 1,
+                "name": "Top N Countries"
+            }
+        }
+    ],
+    "transform": [
+        {
+            "sort": [
+                {
+                    "field": "Wine_production_in_mhl",
+                    "order": "descending"
+                }
+            ],
+            "window": [
+                {
+                    "op": "rank",
+                    "as": "rank_wine"
+                }
+            ],
+            "groupby": [
+                "Year"
+            ]
+        },
+        {
+            "filter": "datum.rank_wine <= top_k_countries"
+        }
+    ],
+    "encoding": {
+        "x": {
+            "field": "Year",
+            "title": "Year",
+            "type": "ordinal",
+            "axis": {
+                "domain": false,
+                "titlePadding": 15,
+                "labelAngle": 0,
+                "ticks": false
+            }
+        },
+        "y": {
+            "field": "rank_wine",
+            "title": "Rank of Wine Production in Million Hectoliters",
+            "type": "quantitative",
+            "sort": "descending",
+            "scale": {
+                "domain": [
+                    0.5,
+                    {
+                        "expr": "top_k_countries+0.5"
+                    }
+                ]
+            },
+            "axis": {
+                "domain": false,
+                "titlePadding": 15,
+                "tickCount": {
+                    "expr": "top_k_countries"
+                },
+                "labelAngle": 0,
+                "tickMinStep": 1
+            }
+        },
+        "color": {
+            "field": "Country",
+            "type": "nominal",
+            "title": "Country",
+            "scale": {
+                "scheme": "rainbow"
+            }
+        },
+        "tooltip": [
+            {
+                "field": "Country",
+                "title": "Country"
+            },
+            {
+                "field": "Year",
+                "title": "Year"
+            },
+            {
+                "field": "Wine_production_in_mhl",
+                "title": "Wine production in million hectoliters",
+                "format": ".1f"
+            },
+            {
+                "field": "rank_wine",
+                "title": "Rank"
+            }
+        ]
+    },
+    "layer": [
+        {
+            "mark": {
+                "type": "line",
+                "interpolate": "monotone",
+                "cursor": "pointer"
+            },
+            "encoding": {
+                "color": {
+                    "field": "Country",
+                    "scale": {
+                        "scheme": "rainbow"
+                    },
+                    "legend": {
+                        "offset": 50
+                    }
+                },
+                "size": {
+                    "condition": {
+                        "param": "legend_filter",
+                        "empty": false,
+                        "value": 3
+                    },
+                    "value": 1
+                }
+            }
+        },
+        {
+            "params": [
+                {
+                    "name": "legend_filter",
+                    "select": {
+                        "type": "point",
+                        "on": "click",
+                        "fields": [
+                            "Country"
+                        ]
+                    },
+                    "bind": "legend"
+                }
+            ],
+            "mark": {
+                "type": "tick",
+                "thickness": 5,
+                "cursor": "pointer"
+            },
+            "encoding": {
+                "color": {
+                    "condition": {
+                        "param": "legend_filter",
+                        "empty": false,
+                        "value": "black"
+                    },
+                    "field": "Country"
+                },
+                "size": {
+                    "condition": {
+                        "param": "legend_filter",
+                        "empty": false,
+                        "value": 20
+                    },
+                    "value": 10
+                }
+            }
+        },
+        {
+            "mark": {
+                "type": "text",
+                "align": "left",
+                "baseline": "top",
+                "dy": -20,
+                "dx": -15,
+                "fontStyle": "italic"
+            },
+            "encoding": {
+                "text": {
+                    "field": "rank_wine",
+                    "type": "quantitative",
+                    "condition": [
+                        {
+                            "test": "datum['rank_wine'] == 1 && datum['Year'] == 2012",
+                            "value": [
+                                "Italy has been ranked first for 2012, 2013, 2015 and 2016."
+                            ]
+                        }
+                    ]
+                },
+                "color": {
+                    "value": "darkred"
+                },
+                "opacity": {
+                    "condition": {
+                        "test": "datum['rank_wine'] == 1 && datum['Year'] == 2012",
+                        "value": 1
+                    },
+                    "value": 0
+                }
+            }
+        }
+    ],
+    "config": {
+        "background": "#FBF9F7",
+        "view": {
+            "stroke": "transparent"
+        }
+    }
+}
