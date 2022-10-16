@@ -305,3 +305,10 @@ ul.sub-menu a::before {
   left: 27%;
 }
 
+z {
+  color: grey;
+  font-style: italic;
+  line-height: 1.5;
+  text-align: justify;
+  font-size: small;
+}
