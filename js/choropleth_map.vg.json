@@ -8,6 +8,33 @@
     "url": "https://raw.githubusercontent.com/itsashleyooi/AllAboutAlcoholandWine/main/js/world.topojson",
     "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
   },
+  "params": [
+    {
+      "name": "Continent_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "North America",
+          "South America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+        ],
+        "labels": [
+          "All Continents",
+          "North America",
+          "South America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+        ],
+        "name": "Select Continent: "
+      }
+    }
+  ],
   "layer": [
     {
       "transform": [
@@ -28,11 +55,14 @@
           "lookup": "properties.NAME",
           "from": {
             "data": {
-              "url": "https://raw.githubusercontent.com/itsashleyooi/AllAboutAlcoholandWine/main/data/alcohol_consumptions.csv"
+              "url": "https://raw.githubusercontent.com/itsashleyooi/AllAboutAlcoholandWine/main/data/alcohol_consumption.csv"
             },
             "key": "Country",
-            "fields": ["alcohol_per_capita"]
+            "fields": ["alcohol_per_capita", "continent"]
           }
+        },
+        {
+          "filter": "Continent_selection == null || datum.continent == Continent_selection"
         }
       ],
       "mark": {
