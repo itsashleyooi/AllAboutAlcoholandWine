@@ -114,9 +114,19 @@
   .coloured {
     color: #00008B;
   }
+
+  .coloured1 {
+    color: #00008B;
+    font-size: larger;
+  }
   
   .coloured2 {
     color: #a63603;
+  }
+
+  .coloured15 {
+    color: #a63603;
+    font-size: larger;
   }
 
   .coloured3 {
@@ -131,8 +141,18 @@
     color: #FF0000;
   }
   
+  .coloured11 {
+    color: #FF0000;
+    font-size: larger;
+  }
+
   .coloured6 {
     color: #DAA520;
+  }
+
+  .coloured12 {
+    color: #DAA520;
+    font-size: larger;
   }
 
   .coloured7 {
@@ -147,8 +167,18 @@
     color: #e6550d;
   }
 
+  .coloured13 {
+    color: #e6550d;
+    font-size: larger;
+  }
+
   .coloured10 {
     color: #fdae6b;
+  }
+
+  .coloured14 {
+    color: #fdae6b;
+    font-size: larger;
   }
 
   .split {
