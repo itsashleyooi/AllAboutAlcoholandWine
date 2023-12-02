@@ -1,4 +1,4 @@
-# Data Visualization Website
+# Data Visualization Web Page
 Visualizations about alcohol consumption and wine from 2012 to 2019 using Vegalite. 
 
 Introduction:
