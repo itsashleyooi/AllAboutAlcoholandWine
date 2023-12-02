@@ -1,5 +1,11 @@
-# FIT3179 Data Visualisation Assignment 2
+# Data Visualisation Website
 Visualisations about alcohol consumption and wine from 2012 to 2019 using Vegalite. 
+
+Introduction:
+> - This notebook demostrates various programming functions and uses of data science knowledge using datasets from various sources. 
+> - Most of the content practices the fundamental basic of data science analysis, thus it is able to determine if one has interest in this field without diving too deep
+> - All codes to create the website can be found in the `index.html`
+> - The datasets used are in the `data` folder and the codes for the produced charts (in json) can be found in the `js` folder
 
 ## Data Sources
 Wine Production by Country [Kaggle](https://www.kaggle.com/datasets/shitalgaikwad123/wine-production-by-country)\
