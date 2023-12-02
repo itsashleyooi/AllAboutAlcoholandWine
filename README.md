@@ -16,5 +16,17 @@ Alcohol Consumption [Our World in Data](https://ourworldindata.org/alcohol-consu
 ## Link to visualisation
 [Click Here](https://itsashleyooi.github.io/AllAboutAlcoholandWine/)
 
+## Idioms Used
+> - Interactive Choropleth Map
+> - Interactive Bump Chart
+> - Interactive Isotype Dot Plot with Emoji
+> - Sankey Diagram
+> - Coxcomb Chart
+> - Ranged Dot Plot
+> - Lollipop Chart
+> - Box Plot
+> - Interactive Bubble Chart
+
+
 Author: Ashley Ooi Yan-Lin (31171095)\
 Monash University, Semester 2, 2022
