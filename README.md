@@ -26,7 +26,3 @@ Alcohol Consumption [Our World in Data](https://ourworldindata.org/alcohol-consu
 > - Lollipop Chart
 > - Box Plot
 > - Interactive Bubble Chart
-
-
-Author: Ashley Ooi Yan-Lin (31171095)\
-Monash University, Semester 2, 2022
