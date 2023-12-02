@@ -1,5 +1,5 @@
-# Data Visualisation Website
-Visualisations about alcohol consumption and wine from 2012 to 2019 using Vegalite. 
+# Data Visualization Website
+Visualizations about alcohol consumption and wine from 2012 to 2019 using Vegalite. 
 
 Introduction:
 > - This notebook demostrates various programming functions and uses of data science knowledge using datasets from various sources. 
